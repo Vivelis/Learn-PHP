@@ -3,8 +3,8 @@
     <head>
         <?php
             // require return a fatal error if file does not exist.
-            // _one include avoid to include many time same thing
-            require_one 'functions.php';
+            // _once include avoid to include many time same thing
+            require_once 'functions.php';
         ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -108,6 +108,19 @@
             echo "use define(arg1,arg2);<br>";
             define("MY_MACRO", "value");
             echo MY_MACRO;
+
+            echo "<h2>Superglobals</h2>";
+            $globals = array("GLOBALS", "\$_POST", "\$_GET", "\$_SERVER", "\$_COOKIE", "\$_SESSION", "\$_FILES");
+
+            foreach ($globals as $element => $value) {
+                echo "{$value}<br>";
+            }
+            $GLOBALS['variableName'] = 0;
+            function add() {
+                $GLOBALS['variableName'] += 1;
+            }
+            add();
+            echo $GLOBALS['variableName'];
         ?>
         <?php
             include 'footer.php';
