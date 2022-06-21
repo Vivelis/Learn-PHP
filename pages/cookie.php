@@ -3,6 +3,10 @@
 
     </head>
     <body>
+        <?php
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/header.php';
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/nav_bar.php';
+        ?>
         Store data on the user computer.<br>
         Do not use for secure data.<br>
         <?php
@@ -14,5 +18,8 @@
         print_r($_COOKIE);
         echo "name = " . $_COOKIE['name'] . "<br>";
         ?> 
+        <?php
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/footer.php';
+        ?>
     </body>
 </html>

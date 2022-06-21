@@ -4,14 +4,16 @@
         <?php
             // require return a fatal error if file does not exist.
             // _once include avoid to include many time same thing
-            require_once 'functions.php';
+            require_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/functions.php';
         ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="style.css" rel="stylesheet" type="text/css" />    </head>
     <body>
-        <header>
-        </header>
+        <?php
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/header.php';
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/nav_bar.php';
+        ?>
         <h1>hello you</h1>
         <a href="https://www.youtube.com/watch?v=cGwSm8xDSwI">link to the course<br></a>
         <?php
@@ -123,7 +125,7 @@
             echo $GLOBALS['variableName'];
         ?>
         <?php
-            include 'footer.php';
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/footer.php';
         ?>
     </body>
 </html>

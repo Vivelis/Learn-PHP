@@ -3,6 +3,10 @@
 
     </head>
     <body>
+        <?php
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/header.php';
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/nav_bar.php';
+        ?>
         Upload to the root.<br>
         move it to the Database.<br>
         <?php
@@ -16,5 +20,8 @@
             <input type="file" name="file">
             <button type="submit">SUBMIT</button>
         </form>
+        <?php
+            include_once $_SERVER['DOCUMENT_ROOT'].'/Learn-PHP/php_elements/footer.php';
+        ?>
     </body>
 </html>
