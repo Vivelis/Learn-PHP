@@ -4,8 +4,8 @@
 
 <?php
     if (isset($_SESSION['sessionId'])) {
-        echo $_SESSION['sessionId'];
-        echo "You are logged in.<br>";
+        echo $_SESSION['sessionUser'];
+        echo " You are logged in.<br>";
     } else {
         echo "Home.<br>";
     }
